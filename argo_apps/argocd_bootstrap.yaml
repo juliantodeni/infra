@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/juliantodeni/mymini.git
+    repoURL: https://github.com/juliantodeni/infra.git
     targetRevision: main
-    path: infra/argo_apps
+    path: argo_apps
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
