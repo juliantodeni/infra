@@ -1,0 +1,21 @@
+# Enable KRaft mode (ZooKeeper-less)
+kraft:
+  enabled: true
+
+# Single replica for lightweight local setup
+controller:
+  replicaCount: 1
+broker:
+  replicaCount: 1
+
+# Disable persistence (so pods start faster in Minikube)
+persistence:
+  enabled: false
+
+# Service exposure (keep it internal)
+service:
+  type: ClusterIP
+
+# Disable ZooKeeper completely
+zookeeper:
+  enabled: false
