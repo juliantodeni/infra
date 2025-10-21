@@ -10,9 +10,6 @@ spec:
     targetRevision: main
     path: helm_chart/kafka
     helm:
-      chart: kafka
-      repo: https://charts.bitnami.com/bitnami
-      version: 28.3.0
       valueFiles:
         - values.yaml
 

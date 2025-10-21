@@ -1,0 +1,11 @@
+apiVersion: v2
+name: kafka
+description: A Helm chart for deploying Kafka with Bitnami as dependency
+type: application
+version: 0.1.0
+appVersion: "4.0.0"
+
+dependencies:
+  - name: kafka
+    version: 28.3.0
+    repository: https://charts.bitnami.com/bitnami
