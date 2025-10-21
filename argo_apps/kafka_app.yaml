@@ -6,12 +6,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://charts.bitnami.com/bitnami
-    chart: kafka
-    targetRevision: 28.3.0  # or latest Bitnami Kafka chart
+    repoURL: https://github.com/juliantodeni/infra.git
+    targetRevision: main
+    path: helm_chart/kafka
     helm:
+      chart: kafka
+      repo: https://charts.bitnami.com/bitnami
+      version: 28.3.0
       valueFiles:
-        - https://raw.githubusercontent.com/juliantodeni/infra/refs/heads/main/helm_chart/kafka/values.yaml
+        - values.yaml
 
   destination:
     server: https://kubernetes.default.svc
@@ -22,3 +25,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+
