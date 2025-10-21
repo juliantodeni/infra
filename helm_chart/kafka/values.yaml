@@ -23,6 +23,6 @@ zookeeper:
 # image tag
 kafka:
   image:
-    registry: public.ecr.aws
-    repository: bitnami/kafka
-    tag: 4.1.0-debian-12-r2
+    registry: docker.io
+    repository: confluentinc/cp-kafka
+    tag: 8.1.0
