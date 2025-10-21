@@ -11,7 +11,8 @@ spec:
     targetRevision: 28.3.0  # or latest Bitnami Kafka chart
     helm:
       valueFiles:
-        - https://github.com/juliantodeni/infra/blob/main/helm_chart/kafka/values.yaml
+        - https://raw.githubusercontent.com/juliantodeni/infra/main/helm_chart/kafka/values.yaml
+
   destination:
     server: https://kubernetes.default.svc
     namespace: kafka
