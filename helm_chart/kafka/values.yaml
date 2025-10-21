@@ -19,3 +19,9 @@ service:
 # Disable ZooKeeper completely
 zookeeper:
   enabled: false
+
+# image tag
+image:
+  registry: docker.io
+  repository: bitnami/kafka
+  tag: 4.0.0-debian-12-r10
