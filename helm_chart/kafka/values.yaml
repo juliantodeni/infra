@@ -21,7 +21,8 @@ zookeeper:
   enabled: false
 
 # image tag
-image:
-  registry: public.ecr.aws
-  repository: bitnami/kafka
-  tag: 4.1.0-debian-12-r2
+kafka:
+  image:
+    registry: public.ecr.aws
+    repository: bitnami/kafka
+    tag: 4.1.0-debian-12-r2
