@@ -25,4 +25,4 @@ kafka:
   image:
     registry: docker.io
     repository: confluentinc/cp-kafka
-    tag: 8.1.0
+    tag: 7.3.0

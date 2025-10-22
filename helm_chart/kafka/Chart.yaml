@@ -7,7 +7,7 @@ appVersion: "4.0.0"
 
 dependencies:
   - name: kafka
-    version: 28.3.0
-    repository: https://charts.bitnami.com/bitnami
+    version: 0.2.0
+    repository: https://ricardo-aires.github.io/helm-charts/
 
 #test
