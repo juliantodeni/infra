@@ -1,28 +1,24 @@
-# Enable KRaft mode (ZooKeeper-less)
+# Enable KRaft mode (no ZooKeeper)
 kraft:
   enabled: true
 
-# Single replica for lightweight local setup
+# Number of Kafka nodes (set small for local testing)
 controller:
   replicaCount: 1
 broker:
   replicaCount: 1
 
-# Disable persistence (so pods start faster in Minikube)
+# Disable persistence (for faster restarts)
 persistence:
   enabled: false
 
-# Service exposure (keep it internal)
+# Internal service only (not LoadBalancer)
 service:
   type: ClusterIP
 
-# Disable ZooKeeper completely
-zookeeper:
-  enabled: false
-
-# image tag
-kafka:
-  image:
-    registry: docker.io
-    repository: confluentinc/cp-kafka
-    tag: 7.3.0
+# Disable metrics if you don’t need Prometheus integration yet
+metrics:
+  jmx:
+    enabled: false
+  kafka:
+    enabled: false
