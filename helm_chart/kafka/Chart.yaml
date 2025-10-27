@@ -1,13 +1,12 @@
 apiVersion: v2
 name: kafka
-description: A Helm chart for deploying Kafka with Bitnami as dependency
+description: A Helm chart to deploy Kafka using Argo CD
 type: application
 version: 0.1.0
-appVersion: "4.0.0"
+appVersion: "3.7.0"
 
 dependencies:
   - name: kafka
-    version: 0.2.0
-    repository: https://ricardo-aires.github.io/helm-charts/
+    version: 29.2.2       # check `helm search repo bitnami/kafka` for latest
+    repository: https://charts.bitnami.com/bitnami
 
-#test
