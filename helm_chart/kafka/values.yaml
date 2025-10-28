@@ -1,5 +1,5 @@
 kafka-kraft-on-k8s:
-  namespace: kafka
+#  namespace: kafka
   replicaCount: 1
   kraft:
     enabled: true
