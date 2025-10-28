@@ -10,9 +10,9 @@ spec:
     targetRevision: main
     path: helm_chart/kafka
     helm:
-#      valueFiles:
-#        - values.yaml
-      releaseName: kafka
+      valueFiles:
+        - values.yaml
+#      releaseName: kafka
   destination:
     server: https://kubernetes.default.svc
     namespace: kafka
