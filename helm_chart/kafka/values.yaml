@@ -1,24 +1,21 @@
-# Enable KRaft mode (no ZooKeeper)
-kraft:
-  enabled: true
+# values.yaml
 
-# Number of Kafka nodes (set small for local testing)
-controller:
-  replicaCount: 1
-broker:
-  replicaCount: 1
+kafka:
+  process:
+    roles: broker,controller  # KRaft mode
+  replicaCount: 1            # Single-node for low resource usage
+  podAntiAffinityPreset: soft
+  persistence:
+    enabled: false           # Disable persistent storage for local dev
+  resources:
+    requests:
+      memory: 512Mi
+      cpu: 250m
+    limits:
+      memory: 1Gi
+      cpu: 500m
 
-# Disable persistence (for faster restarts)
-persistence:
-  enabled: false
+zookeeper:
+  enabled: false             # Not needed in KRaft mode
 
-# Internal service only (not LoadBalancer)
-service:
-  type: ClusterIP
-
-# Disable metrics if you don’t need Prometheus integration yet
-metrics:
-  jmx:
-    enabled: false
-  kafka:
-    enabled: false
+debugmode: true              # Useful for troubleshooting in local dev
