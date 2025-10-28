@@ -1,12 +1,19 @@
 apiVersion: v2
-name: kafka
-description: A Helm chart to deploy Kafka using Argo CD
+name: kafka-kraft
+description: A lightweight Apache Kafka KRaft deployment for Minikube
 type: application
 version: 0.1.0
-appVersion: "3.7.0"
-
-dependencies:
-  - name: kafka
-    version: 29.2.2       # check `helm search repo bitnami/kafka` for latest
-    repository: https://charts.bitnami.com/bitnami
-
+appVersion: "3.6.0" # Kafka version
+icon: https://kafka.apache.org/images/logos/kafka.png
+home: https://kafka.apache.org/
+sources:
+  - https://github.com/stefanjay/kafka-kraft-on-k8s
+maintainers:
+  - name: your-name
+    email: your-email@example.com
+keywords:
+  - kafka
+  - kraft
+  - minikube
+  - helm
+dependencies: []
