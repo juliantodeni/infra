@@ -1,21 +1,27 @@
-# values.yaml
-
-kafka:
-  process:
-    roles: broker,controller  # KRaft mode
-  replicaCount: 1            # Single-node for low resource usage
-  podAntiAffinityPreset: soft
+kafka-kraft-on-k8s:
+  namespace: kafka
+  replicaCount: 1
+  kraft:
+    enabled: true
+  zookeeper:
+    enabled: false
   persistence:
-    enabled: false           # Disable persistent storage for local dev
+    enabled: false
   resources:
     requests:
+      cpu: 200m
       memory: 512Mi
-      cpu: 250m
     limits:
-      memory: 1Gi
       cpu: 500m
-
-zookeeper:
-  enabled: false             # Not needed in KRaft mode
-
-debugmode: true              # Useful for troubleshooting in local dev
+      memory: 1Gi
+  service:
+    type: ClusterIP
+  listeners:
+    plaintext:
+      enabled: true
+      port: 9092
+    controller:
+      enabled: true
+      port: 9093
+  metrics:
+    enabled: false
