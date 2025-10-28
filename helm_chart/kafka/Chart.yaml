@@ -3,7 +3,7 @@ name: kafka-kraft
 description: A lightweight Apache Kafka KRaft deployment for Minikube
 type: application
 version: 0.1.0
-appVersion: "3.6.0" # Kafka version
+appVersion: "3.7.0" # Kafka version
 icon: https://kafka.apache.org/images/logos/kafka.png
 home: https://kafka.apache.org/
 sources:
@@ -18,5 +18,5 @@ keywords:
   - helm
 dependencies:
   - name: kafka-kraft-on-k8s
-    version: 0.2.0          
+    version: 1.1.0          
     repository: "https://stefanjay.github.io/kafka-kraft-on-k8s/"
