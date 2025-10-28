@@ -16,4 +16,7 @@ keywords:
   - kraft
   - minikube
   - helm
-dependencies: []
+dependencies:
+  - name: kafka-kraft-on-k8s
+    version: <version from repo>
+    repository: "https://github.com/stefanjay/kafka-kraft-on-k8s.git"
