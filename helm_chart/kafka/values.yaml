@@ -1,12 +1,16 @@
 kafka-kraft-on-k8s:
-#  namespace: kafka
-  replicaCount: 1
+  controller:
+    replicas: 1
+
   kraft:
     enabled: true
+
   zookeeper:
     enabled: false
+
   persistence:
     enabled: false
+
   resources:
     requests:
       cpu: 200m
@@ -14,15 +18,17 @@ kafka-kraft-on-k8s:
     limits:
       cpu: 500m
       memory: 1Gi
+
   service:
     type: ClusterIP
+
   listeners:
     plaintext:
       enabled: true
       port: 9092
     controller:
       enabled: true
-      replicas: 1
       port: 9093
+
   metrics:
     enabled: false
