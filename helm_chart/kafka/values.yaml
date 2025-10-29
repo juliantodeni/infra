@@ -22,6 +22,7 @@ kafka-kraft-on-k8s:
       port: 9092
     controller:
       enabled: true
+      replicas: 1
       port: 9093
   metrics:
     enabled: false
