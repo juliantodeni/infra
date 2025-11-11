@@ -8,14 +8,14 @@ spec:
   source:
     repoURL: https://github.com/juliantodeni/infra.git
     targetRevision: main
-    path: helm_chart/go_app
+    path: helm_chart/goapp
     helm:
-      releaseName: go_app
+      releaseName: goapp
       valueFiles:
         - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: go_app
+    namespace: goapp
   syncPolicy:
     automated:
       prune: true
