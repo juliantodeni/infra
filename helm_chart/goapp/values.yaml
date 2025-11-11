@@ -1,5 +1,8 @@
 replicaCount: 1
 
+fullname: goappTest
+name: goapp
+
 image:
   repository: docker.io/denyyulianto/test-deni
   tag: "latest"
