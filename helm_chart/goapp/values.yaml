@@ -1,6 +1,6 @@
 replicaCount: 1
 
-fullname: goappTest
+fullname: goapptest
 name: goapp
 
 image:
