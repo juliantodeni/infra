@@ -4,7 +4,7 @@ fullname: goapptest
 name: goapp
 
 image:
-  repository: docker.io/denyyulianto/test-deni
+  repository: denyyulianto/test-deni
   tag: "latest"
   pullPolicy: IfNotPresent
 
