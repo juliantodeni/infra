@@ -1,25 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kafka
+  name: go_app
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/juliantodeni/infra.git
     targetRevision: main
-    path: helm_chart/kafka
+    path: helm_chart/go_app
     helm:
-      releaseName: kafka
+      releaseName: go_app
       valueFiles:
         - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: kafka-test
-  syncPolicy: {}
+    namespace: go_app
+  syncPolicy:
  #   automated:
  #     prune: true
  #     selfHeal: true
- #   syncOptions:
- #     - CreateNamespace=true
-
+    syncOptions:
+      - CreateNamespace=true
