@@ -6,7 +6,7 @@ name: goapp
 image:
   repository: denyyulianto/test-deni
   tag: "latest"
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 service:
   type: ClusterIP
